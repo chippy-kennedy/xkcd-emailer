@@ -7,4 +7,5 @@ url = "https://what-if.xkcd.com/"
 html = open(url)
 
 doc = Nokogiri::HTML(html)
-puts doc.title.equal?(ENV['CURRENT_TITLE'])
+puts doc.title == ENV['CURRENT_TITLE']
+
